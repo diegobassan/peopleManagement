@@ -1,0 +1,11 @@
+en:
+  activerecord:
+    models:
+      user_type: User type  #g
+
+    attributes:
+      user_type:
+        allowance: Allowance  #g
+        commissionPercentage: Commissionpercentage  #g
+        description: Description  #g
+        name: Name  #g

@@ -1,0 +1,26 @@
+pt-BR:
+
+  new_user_type: Novo Tipo de Usuário
+  list_user_types: Lista de Tipos de Usuários
+  editing_user_type: Editando Tipo de Usuário
+
+  are_you_sure: Você tem certeza?
+  delete: Remover
+  edit: Editar
+  show: Visualizar
+  bool_yes: Sim
+  bool_no: Não
+  exit: Sair
+  submit: Enviar
+  seach: Procurar
+  
+  activerecord:
+    models:
+      user_type: Tipo de Usuário  #g
+      
+    attributes:
+      user_type:
+        authorizeDiscount: Autoriza Abono  #g
+        commissionPercentage: Percentual de Comissão  #g
+        description: Descrição  #g
+        name: Nome  #g

@@ -1,0 +1,26 @@
+<div class="container">
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong><%= UserType.human_attribute_name("name")%>:</strong>
+  <%= @user_type.name %>
+</p>
+
+<p>
+  <strong><%= UserType.human_attribute_name("description")%>:</strong>
+  <%= @user_type.description %>
+</p>
+
+<p>
+  <strong><%= UserType.human_attribute_name( "authorizeDiscount")%>:</strong>
+  <%=human_boolean(@user_type.authorizeDiscount)  %>
+</p>
+
+<p>
+  <strong><%= UserType.human_attribute_name("commissionPercentage")%>:</strong>
+  <%= @user_type.commissionPercentage %>
+</p>
+
+<%= link_to 'Edit', edit_user_type_path(@user_type) %> |
+<%= link_to 'Back', user_types_path %>
+</div>

@@ -8,9 +8,9 @@ pt-BR:
   cancel: Cancelar
   save: Salvar
 
-
-
   are_you_sure: Você tem certeza?
+  not_be_blank: não pode ser deixado em branco
+
   delete: Remover
   edit: Editar
   show: Visualizar

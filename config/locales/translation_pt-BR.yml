@@ -3,6 +3,12 @@ pt-BR:
   new_user_type: Novo Tipo de Usuário
   list_user_types: Lista de Tipos de Usuários
   editing_user_type: Editando Tipo de Usuário
+  back: Voltar
+  edit: Editar
+  cancel: Cancelar
+  save: Salvar
+
+
 
   are_you_sure: Você tem certeza?
   delete: Remover
@@ -13,11 +19,11 @@ pt-BR:
   exit: Sair
   submit: Enviar
   seach: Procurar
-  
+
   activerecord:
     models:
       user_type: Tipo de Usuário  #g
-      
+
     attributes:
       user_type:
         authorizeDiscount: Autoriza Abono  #g

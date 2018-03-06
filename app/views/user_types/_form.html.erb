@@ -1,3 +1,4 @@
+<div class="container">
 <%= form_for(@user_type) do |f| %>
   <% if @user_type.errors.any? %>
     <div id="error_explanation">
@@ -28,6 +29,16 @@
     <%= f.text_field :commissionPercentage %>
   </div>
   <div class="actions">
-    <%= f.submit %>
-  </div>
+
+    <%= button_tag( :class => "btn btn-success") do %>
+      <i class="fa fa-save"></i>
+      <%=t :save %>
+      <% end %>
+
+    <%= link_to user_types_path, class: "btn btn-default" do %>
+      <i class="fa fa-ban"></i>
+      <%=t :cancel %>
+        <% end %>
+          </div>
 <% end %>
+</div>

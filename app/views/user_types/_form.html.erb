@@ -1,12 +1,14 @@
 <div class="container">
 <%= form_for(@user_type) do |f| %>
   <% if @user_type.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@user_type.errors.count, "error") %> prohibited this user_type from being saved:</h2>
-
+    <div class="alert alert-danger" role="alert">
+      <h4><%= pluralize(@user_type.errors.count, 'erro') %>
+        <%= t("impedir", count: @user_type.errors.count) %>
+        <%=t :of_save %>.
+      </h4>
       <ul>
       <% @user_type.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
+        <li><%= message %>.</li>
       <% end %>
       </ul>
     </div>

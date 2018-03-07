@@ -2,9 +2,9 @@ pt-BR:
   flash:
     actions:
       create:
-        notice: "%{resource_name} foi criado com sucesso."
+        notice: Criado com sucesso.
       update:
-        notice: "%{resource_name} foi atualizado com sucesso."
+        notice: Atualizado com sucesso.
       destroy:
-        notice: "%{resource_name} foi removido com sucesso."
-        alert: "%{resource_name} não pode ser removido."
+        notice: Removido com sucesso.
+        alert: Não pode ser removido.

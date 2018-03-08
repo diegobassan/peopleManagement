@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   resources :user_types
   get 'home/index'
   root to: 'user_types#index'

@@ -1,12 +1,14 @@
 source 'https://rubygems.org'
-
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5'
 # The most popular HTML, CSS, and JavaScript framework for developing responsive, mobile first projects on the web.
 gem 'rails-assets-bootstrap', '3.3.7', source: 'https://rails-assets.org'
 # The font-awesome font bundled as an asset for the rails asset pipeline.
 gem 'font-awesome-rails'
+# Translations for the devise gem.
+gem 'devise-i18n'
+# Flexible authentication solution for Rails with Warden.
+gem 'devise'
 # A set of Rails responders to dry up your application.
 gem 'responders'
 # Repository for collecting Locale data for Ruby on Rails I18n as well as other interesting, Rails related I18n stuff.

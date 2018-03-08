@@ -62,13 +62,13 @@ class UserTypesController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_user_type
-      @user_type = UserType.find(params[:id])
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_user_type
+    @user_type = UserType.find(params[:id])
+  end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def user_type_params
-      params.require(:user_type).permit(:name, :description, :authorizeDiscount, :commissionPercentage)
-    end
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def user_type_params
+    params.require(:user_type).permit(:name, :description, :authorizeDiscount, :commissionPercentage)
+  end
 end

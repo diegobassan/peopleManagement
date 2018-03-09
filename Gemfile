@@ -25,6 +25,8 @@ gem 'coffee-rails', '~> 4.1.0'
 # gem 'therubyracer', platforms: :ruby
 # A Scope & Engine based, clean, powerful, customizable and sophisticated paginator for Ruby webapps
 gem 'kaminari'
+# Translations for the kaminari gem
+gem 'kaminari-i18n'
 # Flexible authentication solution for Rails with Warden.
 gem 'devise'
 # Use jquery as the JavaScript library

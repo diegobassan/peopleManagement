@@ -47,13 +47,17 @@
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><%= current_user.email  %> <span class="caret"></span></a>
               <ul class="dropdown-menu">
-                <li><a href="#">Action</a></li>
-                <li><a href="#">Another action</a></li>
+                <li>
+                  <%= link_to edit_user_registration_path do %>
+                  <i class="fa fa-edit"> <%= t('edit') %></i>
+                  <% end %>
+                </li>
+                 <li><a href="#">Another action</a></li>
                 <li><a href="#">Something else here</a></li>
                 <li role="separator" class="divider"></li>
                 <li>
                   <%= link_to destroy_user_session_path, :method => :delete do %>
-                  <i class="fa fa-sign-out"> Logout</i>
+                  <i class="fa fa-sign-out"> <%= t('logout') %></i>
                   <% end %>
                 </li>
               </ul>
@@ -65,6 +69,7 @@
         <% end %>
       </head>
       <body>
+
         <%= yield %>
       </body>
     </html>

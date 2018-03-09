@@ -1,13 +1,20 @@
 <div class="container">
   <% if notice %>
-    <div class="alert alert-success" role="alert">
-      <%= notice %>
-    </div>
+  <div class="alert alert-success alert-dismissible" role="alert">
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    <%= notice %>
+  </div>
   <% end %>
   <h1>
   <%= t("activerecord.models.user_type", count: @user_types.count) %>
   </h1>
-  <table class="table table-hover">
+  <div class="container" align="right">
+    <%= link_to new_user_type_path, class: "btn btn-success" do %>
+    <i class="fa fa-plus"></i>
+    <%=t :new_user_type %>
+    <% end %>
+  </div>
+  <table class="table">
     <thead>
       <tr>
         <th>
@@ -51,8 +58,7 @@
     </tbody>
   </table>
   <br>
-  <%= link_to new_user_type_path, class: "btn btn-success" do %>
-  <i class="fa fa-plus"></i>
-  <%=t :new_user_type %>
-  <% end %>
+</div>
+<div class="container" align="center">
+  <%= paginate @user_types %>
 </div>

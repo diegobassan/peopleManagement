@@ -4,7 +4,7 @@ class UserTypesController < ApplicationController
   # GET /user_types
   # GET /user_types.json
   def index
-    @user_types = UserType.all
+    @user_types = UserType.page(params[:page]).per(6)
   end
 
   # GET /user_types/1

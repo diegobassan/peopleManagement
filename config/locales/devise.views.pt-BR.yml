@@ -26,6 +26,7 @@ pt-BR:
         unlock_token: Token de desbloqueio
         updated_at: Atualizado em
         completeName: Nome Completo
+        userType: Tipo de Usuário
     models:
       user: Usuário
   devise:

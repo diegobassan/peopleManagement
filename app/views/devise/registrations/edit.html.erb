@@ -13,6 +13,12 @@
     <%= f.text_field :completeName, autofocus: true %>
   </div>
 
+<div class="field">
+    <%= f.label :userType %><br />
+    <%= f.select :userType_id, UserType.pluck(:name, :id) %>
+  </div>
+
+
   <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
     <p>
       <%= t('.currently_waiting_confirmation_for_email', email: resource.unconfirmed_email) %>

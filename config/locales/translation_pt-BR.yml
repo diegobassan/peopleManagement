@@ -1,5 +1,4 @@
 pt-BR:
-
   new_user_type: Novo Tipo de Usuário
   list_user_types: Lista de Tipos de Usuários
   edit_user_type: Editar Tipo de Usuário
@@ -39,3 +38,4 @@ pt-BR:
         commissionPercentage: Percentual de Comissão  #g
         description: Descrição  #g
         name: Nome  #g
+

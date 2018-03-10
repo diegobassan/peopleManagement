@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180308183822) do
+ActiveRecord::Schema.define(version: 20180310003534) do
 
   create_table "user_types", force: :cascade do |t|
     t.string   "name"
@@ -35,11 +35,12 @@ ActiveRecord::Schema.define(version: 20180308183822) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
-    t.string   "username"
     t.string   "completeName"
+    t.integer  "userType_id"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+  add_index "users", ["userType_id"], name: "index_users_on_userType_id"
 
 end

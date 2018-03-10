@@ -12,7 +12,7 @@ class ApplicationController < ActionController::Base
   def configure_permitted_parameters
     devise_parameter_sanitizer.permit(:sign_up, keys: [:email, :password, :password_confirmation])
     devise_parameter_sanitizer.permit(:sign_in, keys: [:email, :password, :password_confirmation])
-    devise_parameter_sanitizer.permit(:account_update, keys: [:completeName, :email, :password, :password_confirmation, :current_password])
+    devise_parameter_sanitizer.permit(:account_update, keys: [:userType_id, :completeName, :email, :password, :password_confirmation, :current_password])
   end
 
   # Prevent CSRF attacks by raising an exception.

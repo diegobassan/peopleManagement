@@ -14,10 +14,11 @@ class Users::RegistrationsController < Devise::RegistrationsController
   #   super
   # end
 
-  # GET /resource/edit
-  # def edit
-  #   super
-  # end
+   GET /resource/edit
+   def edit
+     super
+     @user_types = user_types.all
+   end
 
   # PUT /resource
   # def update

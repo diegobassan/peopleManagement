@@ -39,6 +39,12 @@ Rails.application.configure do
   # Raises helpful error messages.
   config.assets.raise_runtime_errors = true
 
+  # Devise Mail Configuration
+  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+
+  #Better Errors Configuration
+  BetterErrors::Middleware.allow_ip! ENV['TRUSTED_IP'] if ENV['TRUSTED_IP']
+
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
 end

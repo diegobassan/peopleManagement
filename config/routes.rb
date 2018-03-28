@@ -1,14 +1,13 @@
 Rails.application.routes.draw do
 
-  devise_for :users, :skip => [:registrations], :controllers => { :registrations => 'users/registrations' }
+  devise_for :users, :skip => [:registrations]
   as :user do
     get 'users/edit' => 'devise/registrations#edit', :as => 'edit_user_registration'
     put 'users' => 'devise/registrations#update', :as => 'user_registration'
-    delete 'users' => 'devise/registrations#destroy', :as => 'user_destroy'
   end
 
   resources :user_types
-  resources :users, except: [:show]
+  resources :users, except: [:show, :destroy]
   get 'home/index'
   root to: 'user_types#index'
 

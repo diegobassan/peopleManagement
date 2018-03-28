@@ -1,84 +1,74 @@
 class UsersController < ApplicationController
-  # GET /users
-  # GET /users.json
+  before_action :set_user, only: [:show, :edit, :update, :destroy]
+
+  # GET /user_types
+  # GET /user_types.json
   def index
-    @users = User.all
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render :json => @users }
-    end
+    @user = User.page(params[:page]).per(6)
   end
 
-
-  # GET /users/1
-  # GET /users/1.json
+  # GET /user_types/1
+  # GET /user_types/1.json
   def show
-    @user = User.find(params[:id])
-
-    respond_to do |format|
-      format.html # show.html.erb
-      format.json { render :json => @user }
-    end
   end
 
-  # GET /users/new
-  # GET /users/new.json
+  # GET /user_types/new
   def new
     @user = User.new
-
-    respond_to do |format|
-      format.html # new.html.erb
-      format.json { render :json => @user }
-    end
   end
 
-  # GET /users/1/edit
+  # GET /user_types/1/edit
   def edit
-    @user = User.find(params[:id])
   end
 
-  # POST /users
-  # POST /users.json
+  # POST /user_types
+  # POST /user_types.json
   def create
-    @user = User.new(params[:user])
+    @user = User.new(user_params)
 
     respond_to do |format|
       if @user.save
-        format.html { redirect_to @user, :notice => 'User was successfully created.' }
-        format.json { render :json => @user, :status => :created, :location => @user }
+        format.html { redirect_to @user, notice: t('flash.actions.create.notice') }
+        format.json { render :show, status: :created, location: @user }
       else
-        format.html { render :action => "new" }
-        format.json { render :json => @user.errors, :status => :unprocessable_entity }
+        format.html { render :new }
+        format.json { render json: @user.errors, status: :unprocessable_entity }
       end
     end
   end
 
-  # PUT /users/1
-  # PUT /users/1.json
+  # PATCH/PUT /user_types/1
+  # PATCH/PUT /user_types/1.json
   def update
-    @user = User.find(params[:id])
-
     respond_to do |format|
-      if @user.update_attributes(params[:user])
-        format.html { redirect_to @user, :notice => 'User was successfully updated.' }
-        format.json { head :ok }
+      if @user.update(user_params)
+        format.html { redirect_to @user, notice: t('flash.actions.update.notice') }
+        format.json { render :show, status: :ok, location: @user }
       else
-        format.html { render :action => "edit" }
-        format.json { render :json => @user.errors, :status => :unprocessable_entity }
+        format.html { render :edit }
+        format.json { render json: @user.errors, status: :unprocessable_entity }
       end
     end
   end
 
-  # DELETE /users/1
-  # DELETE /users/1.json
+  # DELETE /user_types/1
+  # DELETE /user_types/1.json
   def destroy
-    @user = User.find(params[:id])
     @user.destroy
-
     respond_to do |format|
-      format.html { redirect_to users_url }
-      format.json { head :ok }
+      format.html { redirect_to user_url, notice: t('flash.actions.destroy.notice') }
+      format.json { head :no_content }
     end
+  end
+
+  private
+  # Use callbacks to share common setup or constraints between actions.
+  def set_user
+    @user = User.find(params[:id])
+  end
+
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def user_params
+    params.require(:user).permit(:email, :password, :password_confirmation)
   end
 end

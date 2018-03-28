@@ -24,12 +24,18 @@ UserType.find_or_create_by name: 'Filial', description: 'Base para realização 
 
 UserType.find_or_create_by name: 'Agendador/Monitor', description: 'Agenda e altera serviços, presta suporte aos consultores. ', authorizeDiscount: false, commissionPercentage: '0.5'
 
+user = User.new(
+  email: 'admin@admin.com',
+  password: '123456',
+  password_confirmation: '123456',
+  is_active: true
+)
+user.save!
 
-
-
-
-
-
-
-
-
+user = User.new(
+  email: 'user@user.com',
+  password: '123456',
+  password_confirmation: '123456',
+  is_active: false
+)
+user.save!

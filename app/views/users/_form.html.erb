@@ -22,6 +22,14 @@
     <%= f.email_field :email, class:"form-control" %>
   </div>
   <div class="form-group">
+    <%= f.label :completeName %><br>
+    <%= f.text_field :completeName, class:"form-control" %>
+  </div>
+  <div class="field">
+    <%= f.label :userType %><br />
+    <%= f.select :userType_id, UserType.pluck(:name, :id) %>
+  </div>
+  <div class="form-group">
     <%= f.label :is_active %>
     <%= f.check_box :is_active, class:"checkbox" %>
   </div>

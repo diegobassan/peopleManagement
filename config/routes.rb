@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   end
 
   resources :user_types
-  resources :users, except: [:show, :destroy]
+  resources :users#, except: [:show, :destroy]
   get 'home/index'
   root to: 'user_types#index'
 

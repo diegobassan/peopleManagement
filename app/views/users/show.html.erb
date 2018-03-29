@@ -13,30 +13,20 @@
       <div class="well">
         <p>
           <strong>
-          <%= UserType.human_attribute_name("name")%>:</strong>
-          <%= @user.name %>
+          <%= UserType.human_attribute_name("email")%>:</strong>
+          <%= @user.email %>
         </p>
         <p>
           <strong>
-          <%= UserType.human_attribute_name("description")%>:</strong>
-          <%= @user.description %>
-        </p>
-        <p>
-          <strong>
-          <%= UserType.human_attribute_name( "authorizeDiscount")%>:</strong>
-          <%=human_boolean(@user.authorizeDiscount)  %>
-        </p>
-        <p>
-          <strong>
-          <%= UserType.human_attribute_name("commissionPercentage")%>:</strong>
-          <%= @user.commissionPercentage %>
+          <%= UserType.human_attribute_name("completeName")%>:</strong>
+          <%= @user.completeName %>
         </p>
       </div>
-      <%= link_to edit_user_type_path(@user), class: "btn btn-info" do %>
+      <%= link_to edit_user_path(@user), class: "btn btn-info" do %>
       <i class="fa fa-edit"></i>
       <%=t :edit %>
       <% end %>
-      <%= link_to user_types_path, class: "btn btn-default" do %>
+      <%= link_to users_path, class: "btn btn-default" do %>
       <i class="fa fa-arrow-left"></i>
       <%=t :back %>
       <% end %>

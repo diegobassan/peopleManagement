@@ -1,8 +1,14 @@
 source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5'
-# The most popular HTML, CSS, and JavaScript framework for developing responsive, mobile first projects on the web.
-gem 'rails-assets-bootstrap', '3.3.7', source: 'https://rails-assets.org'
+
+
+source 'https://rails-assets.org' do
+  # The most popular HTML, CSS, and JavaScript framework for developing responsive, mobile first projects on the web.
+  gem 'rails-assets-bootstrap', '3.3.7'
+  # Sobrescreve o data-confirm do Rails pelo bootbox.js
+  gem 'rails-assets-bootbox'
+end
 # The font-awesome font bundled as an asset for the rails asset pipeline.
 gem 'font-awesome-rails'
 # Translations for the devise gem.

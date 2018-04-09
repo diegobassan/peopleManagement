@@ -9,7 +9,7 @@ Rails.application.configure do
   config.cache_classes = false
 
   # Devise Config.
-  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+  #config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
 
   # Do not eager load code on boot.
   config.eager_load = false
@@ -43,6 +43,7 @@ Rails.application.configure do
 
   # Mail Catcher Configuration
   config.action_mailer.smtp_settings = { address: "localhost", port: 1025 }
+  config.action_mailer.delivery_method = :smtp
 
   #Better Errors Configuration
   BetterErrors::Middleware.allow_ip! ENV['TRUSTED_IP'] if ENV['TRUSTED_IP']

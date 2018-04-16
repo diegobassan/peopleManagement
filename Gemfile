@@ -8,6 +8,8 @@ source 'https://rails-assets.org' do
   gem 'rails-assets-bootstrap', '3.3.7'
   # Sobrescreve o data-confirm do Rails pelo bootbox.js
   gem 'rails-assets-bootbox'
+  # A simple, versatile notification library
+  gem 'rails-assets-notifyjs'
 end
 # The font-awesome font bundled as an asset for the rails asset pipeline.
 gem 'font-awesome-rails'

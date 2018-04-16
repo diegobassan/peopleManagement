@@ -1,7 +1,9 @@
 pt-BR:
   new_user_type: Novo Tipo de Usuário
+  new_user: Novo Usuário
   list_user_types: Lista de Tipos de Usuários
   edit_user_type: Editar Tipo de Usuário
+  edit_user: Editar Usuário
   back: Voltar
   edit: Editar
   cancel: Cancelar
@@ -15,7 +17,6 @@ pt-BR:
   impedir:
     one: impediu
     other: impediram
-
 
   delete: Remover
   edit: Editar
@@ -31,6 +32,9 @@ pt-BR:
       user_type:
         one: Tipo de Usuário
         other: Tipos de Usuário
+      user:
+        one: Usuário
+        other: Usuários
 
     attributes:
       user_type:
@@ -38,4 +42,11 @@ pt-BR:
         commissionPercentage: Percentual de Comissão  #g
         description: Descrição  #g
         name: Nome  #g
+      user:
+        email: Email
+        completeName: Nome Completo
+        userType: Tipo de Usuário
+        is_active: Ativo
+        description: Descrição
+
 

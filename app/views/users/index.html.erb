@@ -8,6 +8,14 @@
   <h1>
   <%= t("activerecord.models.user", count: @user.count) %>
   </h1>
+
+<div class="container" align="right">
+    <%= link_to new_user_path, class: "btn btn-success" do %>
+    <i class="fa fa-plus"></i>
+    <%=t :new_user %>
+    <% end %>
+  </div>
+
   <table class="table">
     <thead>
       <tr>
@@ -15,7 +23,13 @@
           <%= User.human_attribute_name("email")%>
         </th>
         <th>
-          <%= User.human_attribute_name("description")%>
+          <%= User.human_attribute_name("completeName")%>
+        </th>
+        <th>
+          <%= User.human_attribute_name("is_active")%>
+        </th>
+        <th>
+          <%= User.human_attribute_name("userType")%>
         </th>
         <th colspan="3"></th>
       </tr>
@@ -27,18 +41,24 @@
           <%= user.email %>
         </td>
         <td>
-          <%= user.password %>
+          <%= user.completeName %>
+        </td>
+        <td>
+          <%= human_boolean(user.is_active) %>
+        </td>
+        <td>
+          <%= user.userType.name %>
+        </td>
+        <td>
+          <%= link_to user, class: "btn btn-info" do %>
+          <i class="fa fa-eye"></i>
+          <%=t :show %>
+          <% end %>
         </td>
         <td>
           <%= link_to edit_user_path(user), class: "btn btn-default" do %>
           <i class="fa fa-edit"></i>
           <%=t :edit %>
-          <% end %>
-        </td>
-        <td>
-          <%= link_to user, method: :delete, data: { confirm: t('are_you_sure') } , class: "btn btn-danger" do %>
-          <i class="fa fa-trash"></i>
-          <%=t :delete %>
           <% end %>
         </td>
       </tr>

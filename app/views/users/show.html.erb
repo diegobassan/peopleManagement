@@ -13,13 +13,23 @@
       <div class="well">
         <p>
           <strong>
-          <%= UserType.human_attribute_name("email")%>:</strong>
+          <%= User.human_attribute_name("email")%>:</strong>
           <%= @user.email %>
         </p>
         <p>
           <strong>
-          <%= UserType.human_attribute_name("completeName")%>:</strong>
+          <%= User.human_attribute_name("completeName")%>:</strong>
           <%= @user.completeName %>
+        </p>
+        <p>
+          <strong>
+          <%= User.human_attribute_name("is_active")%>:</strong>
+          <%= human_boolean(@user.is_active) %>
+        </p>
+        <p>
+          <strong>
+          <%= User.human_attribute_name("userType")%>:</strong>
+          <%= @user.userType.name %>
         </p>
       </div>
       <%= link_to edit_user_path(@user), class: "btn btn-info" do %>

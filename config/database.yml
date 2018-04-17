@@ -1,15 +1,11 @@
 development:
   adapter: postgresql
-  encoding: unicode
-  database: postgresql-elliptical-31692
-  pool: 5
-  username: bsn.diego@gmail.com
-  password:
+  host: localhost
+  username: user
+  database: app-dev
 
 test:
   adapter: postgresql
-  encoding: unicode
-  database: postgresql-elliptical-31692
-  pool: 5
-  username: bsn.diego@gmail.com
-  password:
+  host: localhost
+  username: user
+  database: app-dev

@@ -2,8 +2,6 @@ source 'https://rubygems.org'
 ruby '2.3.6'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.10'
-
-
 source 'https://rails-assets.org' do
   # The most popular HTML, CSS, and JavaScript framework for developing responsive, mobile first projects on the web.
   gem 'rails-assets-bootstrap', '3.3.7'
@@ -23,7 +21,7 @@ gem 'responders'
 # Repository for collecting Locale data for Ruby on Rails I18n as well as other interesting, Rails related I18n stuff.
 gem 'rails-i18n', '~> 4.0' # For 4.0.x
 # Pg is the Ruby interface to the PostgreSQL RDBMS.
-gem "pg"
+gem 'pg'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets

@@ -22,8 +22,8 @@ gem 'devise'
 gem 'responders'
 # Repository for collecting Locale data for Ruby on Rails I18n as well as other interesting, Rails related I18n stuff.
 gem 'rails-i18n', '~> 4.0' # For 4.0.x
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+# Pg is the Ruby interface to the PostgreSQL RDBMS.
+gem "pg"
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets

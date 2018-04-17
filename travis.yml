@@ -1,0 +1,15 @@
+language: ruby
+cache:
+- bundler
+before_script:
+- bundle exec rake db:create
+- bundle exec rake db:migrate
+- bundle exec rake db:seed
+- bundle exec rake assets:precompile
+deploy:
+  provider: heroku
+  api_key:
+    secure: "AjZ2TI0RacH/Ws065Cd0s21yNDyNVNdm/O1oqFPELRpVixsSBQZpDMgtH4qA8ny+T9fXWlqKAIHTbG4VDKOB220NAViNdn1DsWQKbh1C/BvFEgZpLVkA/HcgKN88OY/fAQQPvOZLM+8vinIruPLlJ6i/JprTsLV/DINNjN9DhRGzSVlHlutXuTJkvq+ycXkyD9v18MU+mDKB7euFutQ+IddEMa+BwPh6fNpp6hqt+7DIc4JfESSsIDcdG6oVxQK5mTT1ipZpbh0DhnzP2rGp8AvABEs+t0rcCV+v4kyOPnpN5yukNx28bl88PpJcoI9XkIfwBhmMrAfg12tAVXd6mk9dCoK0FSPXx2lNHkIRg3mFY1JTOFNTCT696Z92DH539ZXy1bBSnO8+brLQu91yoSSJ81xECUXCbrdDPuzupJEFR86O3obOSQZmGFF/o9yEmnmM3QtnIaq9fMDiqIJ490inCt30XzpEDEoSaQ8MdpMCVSj9q32xKG+DbXTL/O/NlPwBXtwiwvyyWmSweuxqcPIdtka6U5FHdZJKdC+TEzjglHnXjwu9NoZLXfrHLDyH6PWvuIFJqCMC010lzpoaat/KTJl/Im5SU5SnzN9shkiwWiTDYmLeMmOnHS0WsbvhXCytseU3e/82rCDyDdJAmqvcyotFaL/okfhivikf3bk="
+  app: app-people-management
+  on:
+    repo: diegobassan/peopleManagement

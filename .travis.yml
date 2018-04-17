@@ -12,3 +12,4 @@ deploy:
   app: app-people-management
   on:
     repo: diegobassan/peopleManagement
+  skip_cleanup: true

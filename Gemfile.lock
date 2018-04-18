@@ -229,7 +229,7 @@ DEPENDENCIES
   jquery-rails
   kaminari
   kaminari-i18n
-  pg (~> 0.20)
+  pg
   pry-rails
   rails (= 4.2.10)
   rails-assets-bootbox!

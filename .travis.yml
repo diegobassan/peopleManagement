@@ -2,7 +2,9 @@ language: ruby
 cache:
 - bundler
 before_script:
-- bundle exec rake db:create --all
+- bundle exec rake db:reset
+- bundle exec rake db:drop
+- bundle exec rake db:create
 - bundle exec rake db:migrate
 script:
   - bundle exec rake db:seed

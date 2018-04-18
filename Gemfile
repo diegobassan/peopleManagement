@@ -10,6 +10,9 @@ source 'https://rails-assets.org' do
   # A simple, versatile notification library
   gem 'rails-assets-notifyjs'
 end
+
+ gem 'rails_12factor', group: :production
+
 # The font-awesome font bundled as an asset for the rails asset pipeline.
 gem 'font-awesome-rails'
 # Translations for the devise gem.

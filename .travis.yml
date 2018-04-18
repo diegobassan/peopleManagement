@@ -1,6 +1,7 @@
 language: ruby
 cache:
 - bundler
+<<<<<<< HEAD
 script:
 - bundle exec rake db:migrate
 deploy:

@@ -5,3 +5,11 @@ development:
   pool: 5
   username: vagrant
   password: 123456
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: peopleManagement
+  pool: 5
+  username: vagrant
+  password: 123456

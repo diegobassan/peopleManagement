@@ -1,12 +1,8 @@
 language: ruby
 cache:
 - bundler
-<<<<<<< HEAD
 script:
 - bundle exec rake db:migrate
-=======
-before_script:
->>>>>>> b3616f3d83021a3df3898ed1c9709b0e553307af
 deploy:
   provider: heroku
   api_key:

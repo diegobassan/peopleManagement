@@ -11,5 +11,5 @@ test:
   encoding: unicode
   database: peopleManagement
   pool: 5
-  username: vagrant
+  username: user
   password: 123456

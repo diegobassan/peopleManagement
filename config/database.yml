@@ -9,7 +9,7 @@ development:
 test:
   adapter: postgresql
   encoding: unicode
-  database: app-people-Management
+  database: postgresql-trapezoidal-23329
   pool: 5
 
 production:

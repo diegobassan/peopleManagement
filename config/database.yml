@@ -1,18 +1,14 @@
-development:
+default: &default
   adapter: postgresql
   encoding: unicode
-  database: peopleManagement
   pool: 5
+
+development:
+  <<: *default
+  database: peopleManagement
   username: vagrant
   password: 123456
 
 test:
-  adapter: postgresql
-  encoding: unicode
-  database: postgresql-trapezoidal-23329
-  username: cwppmjrcrqwokb
-  password: e135bdd6a60e956079926d40538074a4a90779f094739dfa882116c9e03280f5
-  pool: 5
-
-production:
-  adapter: postgresql
+  <<: *default
+  database: peopleManagement_test

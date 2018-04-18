@@ -9,7 +9,7 @@ development:
 test:
   adapter: postgresql
   encoding: unicode
-  database: peopleManagement
+  database: de89c9td0rjo3j
   pool: 5
-  username: user
-  password: 123456
+  username: cwppmjrcrqwokb
+  password: e135bdd6a60e956079926d40538074a4a90779f094739dfa882116c9e03280f5

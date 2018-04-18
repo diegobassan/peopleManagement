@@ -9,7 +9,7 @@ development:
 test:
   adapter: postgresql
   encoding: unicode
-  database: peopleManagement
+  database: de89c9td0rjo3j
   pool: 5
 
 production:
